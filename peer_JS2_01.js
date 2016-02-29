@@ -88,20 +88,20 @@ value += "45";
 
 var array = [];
 
-for(var i=0; i < value.length; i++) {
+for(var i = 0; i < value.length; i++) {
 	array.push(value.charAt(i));
 }
 
 array.shift();
 array.pop();
 
-
-var newVar;
+var newVar = "";
 
 for (var i = array.length - 1; i > 0; i--) {
-	newVar += array[i];
+	newVar = array[i];
 }
 
+console.log(value);
 console.log(newVar);
 
 value = parseInt(value);
@@ -112,7 +112,7 @@ newVar = parseInt(newVar);
 //Switch partners
 
 
-value += newVar;
+value = newVar;
 
 if(value > 5245) {
 	value = 9;
@@ -124,7 +124,7 @@ if(value > 5245) {
 
 i = 13
 while(i > 0) {
-	value += 1;
+	value = 1;
 	i--;
 }
 
@@ -135,6 +135,7 @@ function whatIs(val) {
 	};
 	return val;
 	value = val;
+	return value;
 }
 
 whatIs(value);
